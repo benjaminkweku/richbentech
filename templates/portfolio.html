@@ -1,0 +1,113 @@
+{% extends "bootstrap/base.html" %} {% block title %} RBTechHub.com/Portfolio{% endblock %} {% block header %}
+<header>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                    <div class="navbar-brand">
+                        <a href="/">
+                            <h1><span>Rich</span>Ben</h1>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <div class="menu">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="/">Home</a></li>
+                            <li role="presentation"><a href="services">Services</a></li>
+                            <li role="presentation"><a href="about">About</a></li>
+                            <li role="presentation"><a href="portfolio" class="active">Portfolio</a></li>
+                            <li role="presentation"><a href="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+{% endblock %} {% block pagetitle %}
+<div class="slider">
+    <div class="img-responsive">
+        <ul class="bxslider">
+
+            <img src="{{url_for('static', filename='./images/slider/1.jpg')}}" alt="" />
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %} {% block content %}
+<div class="container text-center ">
+    <h2><b>quality work Recently done project</b></h2>
+</div>
+<div class="container text-center">
+    <div class="nav_portfolio">
+        <ul>
+            <li><a href="all">all</a></li>
+            <li><a href="popular">popular</a></li>
+            <li><a href="latest" class="active">latest</a></li>
+            <li><a href="upcomming">upcomming</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "bootstrap/base.html" %} {% block title %} RBTechHub.com/Contact {% endblock %} {% block header %}
+<header>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                    <div class="navbar-brand">
+                        <a href="/">
+                            <h1><span>Rich</span>Ben</h1>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <div class="menu">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="/">Home</a></li>
+                            <li role="presentation"><a href="services">Services</a></li>
+                            <li role="presentation"><a href="about">About</a></li>
+                            <li role="presentation"><a href="portfolio">Portfolio</a></li>
+                            <li role="presentation"><a href="contact" class="active">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+{% endblock %} {% block pagetitle %}
+<div class="slider">
+    <div class="img-responsive">
+        <ul class="bxslider">
+
+            <img src="{{url_for('static', filename='./images/slider/2.jpg')}}" alt="" />
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class=" wow fadeInUp" data-wow-offset="0" data-wow-delay="0.4s">
+                <h3>Contact Details</h3>
+                <ul>
+                    <li>
+                        <h4>Densuano Street Koforidua</h4>
+                    </li>
+                    <hr>
+                    <li>
+                        <h4>Phone:(+233)249264588/204955208</h4>
+                    </li>
+                    <hr>
+                    <li>
+                        <h4>Email:<a href="mailto:qwekubenjamin17@gmail.com">qwekubenjamin17@gmail.com
+                    </a></h4>
+                    </li>
+                    <hr>
+                    <li>
+                        <h4>Work Hours: Monday-Friday: 9AM-5PM</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="container">
+                <div class="form-group">
+                    <form action="{{url_for('send')}}" , method="POST">
+                        <h3>Send us Message</h3>
+
+                        <h4>Full Name:</h4>
+                        <input type="text" name="name" class="form-control" required placeholder="Enter Full Name.." required ,data-validation-required-message="Please enter your Full Name."><br>
+                        <h4>Email:</h4>
+                        <input type="email" name="email" class="form-control" required placeholder="Enter Email.." required ,data-validation-required-message="Please enter your Email address."><br>
+                        <h4>Phone:</h4>
+                        <input type="tel" class="form-control" required name="phone" placeholder="Enter Number.." required ,data-validation-required-message="Please enter your Phone number."><br>
+                        <h4>Comments:</h4>
+                        <textarea name="comment" requered id="" cols="30" rows="10" class="form-control" placeholder="Comment here..." required, data-validation-required-message="Please Comment field cannot be empty"></textarea><br>
+                        <button class="btn btn-primary ">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

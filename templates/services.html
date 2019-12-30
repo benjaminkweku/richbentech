@@ -1,0 +1,87 @@
+{% extends "bootstrap/base.html" %} {% block title %} RBTechHub.com/Services {% endblock %} {% block header %}
+<header>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                    <div class="navbar-brand">
+                        <a href="/">
+                            <h1><span>Rich</span>Ben</h1>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <div class="menu">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="/">Home</a></li>
+                            <li role="presentation"><a href="services" class="active">Services</a></li>
+                            <li role="presentation"><a href="about">About</a></li>
+                            <li role="presentation"><a href="portfolio">Portfolio</a></li>
+                            <li role="presentation"><a href="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+{% endblock %} {% block pagetitle %}
+<div class="slider">
+    <div class="img-responsive">
+        <ul class="bxslider">
+
+            <img src="{{url_for('static', filename='./images/slider/3.jpg')}}" alt="" />
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %} {% block content %}
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h3>Our Services</h3>
+        <p>
+            <h5> ipsum dolor sit amet, consectetur adipisicing elit. Quos praesentium eaque dolor? Minima sunt architecto optio, similique quos perferendis unde!</h5>
+        </p>
+    </div>
+    <!--col for services-->
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="wow fadeInDown">
+                    <i class="fa fa-rocket fa-3x"></i>
+                </div>
+                <div class="wow fadeInUp">>
+                    <h5>first col</h5>
+                </div>
+
+            </div>
+            <div class="col-md-4 ">
+                <div class="wow fadeInDown">
+                    <i class="fa fa-rocket fa-3x"></i>
+                </div>
+                <div class="wow fadeInUp">
+                    <h5>first col</h5>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="wow fadeInDown">
+                        <i class="fa fa-eye fa-3x"></i>
+                    </div>
+                    <div class="wow fadeInUp">
+                        <h5>first col</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
